@@ -17,6 +17,7 @@
 						<div class="thumbnail">
 							<%= image_tag(post.image.url) %>
 							<div id= "grad" class="caption post-content">
+								<p class="nickname"><%= post.user.nickname %></p>
 								<p class="date"><%= post.created_at.strftime('%d/%m/%y, %I:%M %P') %></p>
 								<h3><%= link_to post.title, post %></h3>
 							</div>

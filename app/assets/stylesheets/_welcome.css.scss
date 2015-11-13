@@ -4,6 +4,7 @@ $highlight: #8bc6db;
 $border: #E9E9E9;
 $cream: #e5d8be;
 $blue: #8da29b;
+$link: #4d79ff;
 $white: #fff;
 $gray: #66757F;
 .homepage_content{
@@ -31,11 +32,18 @@ $gray: #66757F;
 		}
 	}
 
+	.nickname{
+		font-size: .8em;
+		margin-bottom: 1em;
+		color: $link;
+		text-align: left;
+	}
+
 	.date{
 		font-size: .8em;
 		margin-bottom: 1em;
 		color: $light;
-		text-align: left;
+		text-align: right;
 	}
 
 	p{

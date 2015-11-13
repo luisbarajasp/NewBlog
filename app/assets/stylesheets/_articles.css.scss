@@ -4,6 +4,7 @@ $highlight: #8bc6db;
 $border: #E9E9E9;
 $cream: #e5d8be;
 $blue: #8da29b;
+$link: #4d79ff;
 $white: #fff;
 $gray: #66757F;
 
@@ -33,6 +34,13 @@ $gray: #66757F;
 		}
 		width: 100%;
 		text-align: center;
+	}
+	.nickname{
+		padding: 0 3em 0 0;
+		font-size: .9em;
+		margin-bottom: 0;
+		color: $link;
+		text-align: left;
 	}
 	.date{
 		padding: 0 3em 0 0;
