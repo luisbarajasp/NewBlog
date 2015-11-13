@@ -1,0 +1,29 @@
+<%= form_for @post do |f| %>
+
+	<% if @post.errors.any? %>
+
+		<h2><%= pluralize(@post.errors.count, "error") %> impidió guardar este artículo:</h2>
+		<ul>
+			<% @post.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+
+	<% end %>
+	<div class="form-group">
+		<%= f.label :title, "Título" %> <br>
+		<%= f.text_field :title, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :content, "Escribe tu artículo aquí" %> <br>
+		<%= f.text_area :content, class: "form-control" %> 
+	</div>
+	<div class="form-group">
+		<%= f.label :image, "Imagen" %><br>
+    	<%= f.file_field :image, class: "form-control" %> <br>
+    </div>
+	<div class="form-group">
+   	 	<%= f.submit "Enviar", class: "btn btn-success" %>
+ 	</div>
+
+<% end %>

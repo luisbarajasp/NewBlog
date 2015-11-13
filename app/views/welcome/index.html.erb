@@ -1,0 +1,84 @@
+<div class="wrapper wrapper_padding clearfix">
+		
+		<% if user_signed_in? %>
+
+			<div id="admin_links">
+				<%= link_to "Crear Nuevo Artículo", new_post_path(@post) %>
+			</div>
+
+		<% end %>
+
+		<div class="homepage_content">
+			<h2>Más Recientes</h2>
+			<hr>
+			<div class="row">
+				<% @posts.each do |post| %>
+					<div class="col-md-4">
+						<div class="thumbnail">
+							<%= image_tag(post.image.url) %>
+							<div id= "grad" class="caption post-content">
+								<p class="date"><%= post.created_at.strftime('%d/%m/%y, %I:%M %P') %></p>
+								<h3><%= link_to post.title, post %></h3>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+			<div class="content">
+				<a class="button" href="/posts?page=2">Ver más →</a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="wrapper wrapper_padding clearfix">
+		<div class="homepage_content">
+			<h2>Memes del día</h2>
+			<hr>
+			<div class="timeline">
+				<div class="col-md-6">
+					<p class="date">Martes 3 Noviembre</p>
+					<h3>Hoy</h3>
+					<div class="col-md-2 col-md-offset-5">
+						<div class="hoverinfo"> 
+							<i class="fa fa-dot-circle-o"></i>
+        					<a class="fancybox-thumbs" data-fancybox-group="thumb1" href="http://fancyapps.com/fancybox/demo/4_b.jpg"><img src="http://fancyapps.com/fancybox/demo/4_s.jpg" alt="" /></a>
+
+					        <a class="fancybox-thumbs hidden" data-fancybox-group="thumb1" href="http://fancyapps.com/fancybox/demo/3_b.jpg"><img src="http://fancyapps.com/fancybox/demo/3_s.jpg" alt="" /></a>
+
+					        <a class="fancybox-thumbs" data-fancybox-group="thumb2" href="http://fancyapps.com/fancybox/demo/2_b.jpg"><img src="http://fancyapps.com/fancybox/demo/2_s.jpg" alt="" /></a>
+
+					        <a class="fancybox-thumbs hidden" data-fancybox-group="thumb2" href="http://fancyapps.com/fancybox/demo/1_b.jpg"><img src="http://fancyapps.com/fancybox/demo/1_s.jpg" alt="" /></a>
+        					<!-- <p>3
+            				<br>lines
+            				<br>of text</p> -->
+    					</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<p class="date">Lunes 2 Noviembre</p>
+					<h3>Ayer</h3>
+					<div class="col-md-2 col-md-offset-5">
+						<div class="hoverinfo"> 
+							
+							<i class="fa fa-dot-circle-o"></i>
+							<a class="fancybox-thumbs" data-fancybox-group="thumb1" href="http://fancyapps.com/fancybox/demo/4_b.jpg"><img src="http://fancyapps.com/fancybox/demo/4_s.jpg" alt="" /></a>
+
+					        <a class="fancybox-thumbs hidden" data-fancybox-group="thumb1" href="http://fancyapps.com/fancybox/demo/3_b.jpg"><img src="http://fancyapps.com/fancybox/demo/3_s.jpg" alt="" /></a>
+
+					        <a class="fancybox-thumbs" data-fancybox-group="thumb2" href="http://fancyapps.com/fancybox/demo/2_b.jpg"><img src="http://fancyapps.com/fancybox/demo/2_s.jpg" alt="" /></a>
+
+					        <a class="fancybox-thumbs hidden" data-fancybox-group="thumb2" href="http://fancyapps.com/fancybox/demo/1_b.jpg"><img src="http://fancyapps.com/fancybox/demo/1_s.jpg" alt="" /></a>
+        					<!-- <p>3
+            				<br>lines
+            				<br>of text</p> -->
+    					</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<a class="button" href="#">Ver más →</a>
+			</div>
+		</div>
+
+	</div>

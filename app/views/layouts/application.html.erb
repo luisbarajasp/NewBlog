@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BlogGolG</title>
+	<meta charset="UTF-8">
+	<title>Gol Gana</title>
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<!-- Optionally add helpers - button, thumbnail and/or media -->
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	<script src="app/assets/javascripts/welcome.js"></script>
+
+	<link href='https://fonts.googleapis.com/css?family=Raleway:300,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header id="main_navigation" class="clearfix">
+		<%= link_to "Gol Gana", root_path, class: "name" %>
+		<nav id="icons">
+			<a href="http://twitter.com/GolGana_" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="https://www.facebook.com/Gol-Gana-552214114908953/?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="mailto:golgana.yt@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			<a href="https://www.youtube.com/channel/UCHS1UKOTm7kfaunaFopzxyQ/feed?view_as=public" target="_blank"><i class="fa fa-youtube"></i></a>
+		</nav>
+		<nav>
+			<%= link_to "Articulos", posts_path %>
+			<a href="memes.html">Memes del día</a>
+			<a href="#">¿Quiénes Somos?</a>
+			<% if user_signed_in? %>
+				<%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %>
+			<% end %>
+		</nav>
+	</header>
+
+	<% if notice %>
+		<p class="notice"><%= notice %></p>
+    <%elsif alert%>
+		<p class="alert"><%= alert %></p>
+	<%end%>
 
 <%= yield %>
 
+	<footer id="main_footer">
+		<p class="copyright">©2015 Gol Gana</p>
+	</footer>
+
 </body>
 </html>
+

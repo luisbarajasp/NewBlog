@@ -1,0 +1,59 @@
+<h1 id="page_title">Artículos</h1>	
+
+	<h2 id="section_title">Más Recientes</h2>
+	<hr>
+
+	<div id="posts_wrapper" class="skinny_wrapper">
+		<% @posts.each do |post| %>
+			<div class="post">
+				<div class="thumbnail">
+					<%= image_tag post.image.url, :class => "img-centered" %>
+					<div class="caption post-content" id="grad">
+						<p class="date"><%= post.created_at.strftime('%d/%m/%y, %I:%M %P') %></p>
+						<h2><%= link_to post.title, post %></h2>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	
+	<%= will_paginate @posts, :previous_label => 'Anterior', :next_label => 'Siguiente' %>
+	
+	<div class="wrapper wrapper_padding clearfix menu_articles">
+		<div class="row">
+			<div class="col-md-4">
+				<h2 class="center">Fecha de creación</h2>
+				<hr>
+				<h3><a href="#">Hoy</a></h3>
+				<h3><a href="#">Ayer</a></h3>
+				<h3><a href="#">Domingo, 1</a></h3>
+				<h3><a href="#">Sábado, 31</a></h3>
+				<h3><a href="#">Viernes, 30</a></h3>
+				<h3><a href="#">Jueves, 29</a></h3>
+				<h3><a href="#">Miércoles, 28</a></h3>
+			</div>
+			<div class="col-md-4">
+				<h2 class="center">Creador</h2>
+				<hr class="center">
+				<h3><a href="#">El figura</a></h3>
+				<p class="date">Jorge Castañeda</p>
+				<h3><a href="#">Balonero</a></h3>
+				<p class="date">Chuchito Pérez</p>
+				<h3><a href="#">Ey</a></h3>
+				<p class="date">Pancho Gtz</p>
+			</div>
+			<div class="col-md-4">
+				<h2 class="center">Liga</h2>
+				<hr class="center">
+				<h3><a href="#">Liga MX</a></h3>
+				<h3><a href="#">Internacional</a></h3>
+				<h3><a href="#">UEFA Champions League</a></h3>
+				<h3><a href="#">BBVA</a></h3>
+				<h3><a href="#">Premier League</a></h3>
+				<h3><a href="#">MLS</a></h3>
+				<h3><a href="#">Bundesliga</a></h3>
+				<h3><a href="#">Serie A TIM</a></h3>
+				<h3><a href="#">Argentina</a></h3>
+			</div>
+		</div>
+	</div>
