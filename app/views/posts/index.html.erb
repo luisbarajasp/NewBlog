@@ -9,8 +9,11 @@
 				<div class="thumbnail">
 					<%= image_tag post.image.url, :class => "img-centered" %>
 					<div class="caption post-content" id="grad">
-						<p class="nickname"><%= post.user.nickname %></p>
 						<p class="date"><%= post.created_at.strftime('%d/%m/%y, %I:%M %P') %></p>
+						<div class="links">
+							<a href="#" class="creator"><%= post.user.nickname %></a>
+							<a href="#" class="league">UEFA Champions League</a>
+						</div>
 						<h2><%= link_to post.title, post %></h2>
 					</div>
 				</div>

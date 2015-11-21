@@ -32,13 +32,6 @@ $gray: #66757F;
 		}
 	}
 
-	.nickname{
-		font-size: .8em;
-		margin-bottom: 1em;
-		color: $link;
-		text-align: left;
-	}
-
 	.date{
 		font-size: .8em;
 		margin-bottom: 1em;
@@ -53,7 +46,30 @@ $gray: #66757F;
 	.col-md-4{
 		.post-content {
 			.date{
-				text-align: right;
+				text-align: center;
+			}
+			h3{
+				text-align: center;
+			}
+			.links{
+				.creator{
+					font-size: .8em;
+					margin-bottom: 1em;
+					color: $highlight;
+					text-align: left;
+				}
+				.league{
+					font-size: .8em;
+					margin-bottom: 1em;
+					color: $highlight;
+					text-align: right;
+				}
+				a{
+					text-decoration: none;
+					&:hover{
+						color: $blue;
+					}
+				}
 			}
 			width: 100%;
 			height: 100%;

@@ -2,7 +2,7 @@
 	<header>
 		<p class="date"><%= @post.created_at.strftime('%d/%m/%y, %I:%M %P') %></p>
 		<h1><%= @post.title %></h1>
-		<a class="creator" href="#">El figura</a>
+		<a class="creator" href="#"><%= @post.user.nickname %></a>
 		<a class="league" href="#">UEFA Champions League</a>
 		<hr>
 	</header>

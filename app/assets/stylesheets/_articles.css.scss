@@ -35,19 +35,39 @@ $gray: #66757F;
 		width: 100%;
 		text-align: center;
 	}
-	.nickname{
-		padding: 0 3em 0 0;
-		font-size: .9em;
-		margin-bottom: 0;
-		color: $link;
-		text-align: left;
-	}
 	.date{
 		padding: 0 3em 0 0;
 		font-size: .9em;
 		margin: 0;
-		text-align: right;
-		color: $white;
+		text-align: center;
+		color: $light;
+	}
+	.links{
+		width: 100%;
+		left: 0;
+		.creator{
+			padding: 0 3em 0 0;
+			font-size: .9em;
+			margin-bottom: 0;
+			color: $highlight;
+			text-align: left;
+		}
+		.league{
+			padding: 0 3em 0 0;
+			font-size: .9em;
+			margin-bottom: 0;
+			color: $highlight;
+			text-align: right;
+		}
+		a{
+			text-decoration: none;
+			&:hover{
+				color: $blue;
+			}
+		}
+	}
+	h2{
+		text-align: center;
 	}
 	.post-content {
 		width: 100%;
