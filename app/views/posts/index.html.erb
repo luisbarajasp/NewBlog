@@ -39,12 +39,10 @@
 			<div class="col-md-4">
 				<h2 class="center">Creador</h2>
 				<hr class="center">
-				<h3><a href="#">El figura</a></h3>
-				<p class="date">Jorge Castañeda</p>
-				<h3><a href="#">Balonero</a></h3>
-				<p class="date">Chuchito Pérez</p>
-				<h3><a href="#">Ey</a></h3>
-				<p class="date">Pancho Gtz</p>
+				<% @users.each do |user| %>
+					<h3><a href="#"><%= user.nickname %></a></h3>
+					<p class="date"><%= user.name %></p>
+				<% end %>
 			</div>
 			<div class="col-md-4">
 				<h2 class="center">Liga</h2>

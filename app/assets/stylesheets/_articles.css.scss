@@ -43,8 +43,8 @@ $gray: #66757F;
 		color: $light;
 	}
 	.links{
-		width: 100%;
-		left: 0;
+		margin: auto;
+		width: 60%;
 		.creator{
 			padding: 0 3em 0 0;
 			font-size: .9em;
@@ -57,7 +57,7 @@ $gray: #66757F;
 			font-size: .9em;
 			margin-bottom: 0;
 			color: $highlight;
-			text-align: right;
+			text-align: center;
 		}
 		a{
 			text-decoration: none;
