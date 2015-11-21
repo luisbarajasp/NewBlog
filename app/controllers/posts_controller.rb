@@ -2,6 +2,8 @@ class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
 	before_action :authenticate_user!, except: [:index, :show]
 
+	before_filter :check_user, only: [:edit, :update, :destroy]
+
 	def index
 		@posts = Post.all.order("created_at DESC").paginate(page: params[:page], per_page: 3)
 		@users = User.all
@@ -57,5 +59,10 @@ class PostsController < ApplicationController
 		end
 		def find_post
 			@post = Post.friendly.find(params[:id])
+		end
+		def check_user
+			if current_user != @post.user
+				redirect_to root_url, alert: "Este artículo no te pertenece, no lo puedes editar"
+			end
 		end
 end

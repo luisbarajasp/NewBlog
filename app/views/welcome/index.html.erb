@@ -29,7 +29,9 @@
 				<% end %>
 			</div>
 			<div class="content">
-				<a class="button" href="/posts?page=2">Ver más →</a>
+				<% if (@posts.count > 3) %>
+					<a class="button" href="/posts?page=2">Ver más →</a>
+				<% end %>
 			</div>
 		</div>
 

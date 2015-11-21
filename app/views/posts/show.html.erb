@@ -14,7 +14,7 @@
 		<%= markdown @post.content %>
 	</div>
 
-	<% if user_signed_in? %>
+	<% if user_signed_in? && current_user == @post.user%>
 
 		<div id="admin_links">
 			<%= link_to "Editar", edit_post_path(@post) %>

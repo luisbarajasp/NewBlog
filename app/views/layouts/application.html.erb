@@ -31,9 +31,6 @@
 			<a href="https://www.youtube.com/channel/UCHS1UKOTm7kfaunaFopzxyQ/feed?view_as=public" target="_blank"><i class="fa fa-youtube"></i></a>
 		</nav>
 		<nav>
-			<%= link_to "Articulos", posts_path %>
-			<a href="memes.html">Memes del día</a>
-			<a href="#">¿Quiénes Somos?</a>
 			<% if user_signed_in? %>
 				<!-- Single button -->
 				<div class="btn-group">
@@ -47,6 +44,9 @@
 				  </ul>
 				</div>
 			<% end %>
+			<%= link_to "Articulos", posts_path %>
+			<a href="memes.html">Memes del día</a>
+			<a href="#">¿Quiénes Somos?</a>
 		</nav>
 	</header>
 
