@@ -15,6 +15,16 @@
       <%= f.text_field :nickname, autofocus: false, class: "form-control" %>
     </div>
 
+    <div class="form-group">
+      <%= f.label :username, "Twitter username" %><br />
+      <%= f.text_field :username, autofocus: false, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :avatar, "Imagen de perfil" %><br>
+      <%= f.file_field :avatar, class: "form-control" %> 
+    </div>
+
     <div class="field">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true %>
