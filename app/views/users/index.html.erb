@@ -1,0 +1,22 @@
+<h1 id="page_title">¿Quiénes Somos?</h1>
+
+	<h2 id="section_title">Miembros</h2>
+	<hr>
+
+	<div id="users_wrapper" class="skinny_wrapper">
+		<% @users.each do |user| %>
+		<!-- To avoid admin -->
+			<% if (user.id != 3) %>
+				<div class="user col-md-4">
+					<div class="thumbnail">
+						<%= image_tag user.avatar.url, :class => "img-rounded img-centered" %>
+						<div class="caption">
+							<h3><%= link_to user.nickname, user, :class => "nickname" %> </h3>
+							<h4><%= user.name %></h4>
+							<p>Artículos: <%= user.posts.count %> </p>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+	</div>
