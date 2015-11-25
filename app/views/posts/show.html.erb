@@ -3,7 +3,7 @@
 		<p class="date"><%= @post.created_at.strftime('%d/%m/%y, %I:%M %P') %></p>
 		<h1><%= @post.title %></h1>
 		<%= link_to @post.user.nickname, @post.user, :class => "creator" %>
-		<a class="league" href="#">UEFA Champions League</a>
+		<%= link_to @post.category.category, @post.category, :class => "league" %>
 		<hr>
 	</header>
 	
