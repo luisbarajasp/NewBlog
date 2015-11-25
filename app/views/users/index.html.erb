@@ -11,7 +11,7 @@
 				<% if (user.id != 3) %>
 					<div class="user col-md-6">
 						<div class="thumbnail">
-							<%= image_tag user.avatar.url, :class => "img-rounded img-centered" %>
+							<%= image_tag user.avatar.url(:medium), :class => "img-rounded img-centered" %>
 							<div class="caption">
 								<h3><%= link_to user.nickname, user, :class => "nickname" %> </h3>
 								<h4><%= user.name %></h4>
