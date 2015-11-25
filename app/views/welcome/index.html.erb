@@ -11,7 +11,7 @@
 		<div class="homepage_content">
 			<h2>Más Recientes</h2>
 			<hr>
-			<div class="row">
+			<div class="row_index">
 				<% @posts.each do |post| %>
 					<div class="col-md-4">
 						<div class="thumbnail">
@@ -19,7 +19,7 @@
 							<div id= "grad" class="caption post-content">
 								<p class="date"><%= post.created_at.strftime('%d/%m/%y, %I:%M %P') %></p>
 								<div class="links">
-									<a href="#" class="creator"><%= post.user.nickname %></a>
+									<%= link_to post.user.nickname, post.user, :class => "creator" %>
 									<a href="#" class="league">UEFA Champions League</a>
 								</div>
 								<h3><%= link_to post.title, post %></h3>

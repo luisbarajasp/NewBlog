@@ -11,7 +11,7 @@
 					<div class="caption post-content" id="grad">
 						<p class="date"><%= post.created_at.strftime('%d/%m/%y, %I:%M %P') %></p>
 						<div class="links">
-							<a href="#" class="creator"><%= post.user.nickname %></a>
+							<%= link_to post.user.nickname, post.user, :class => "creator" %>
 							<a href="#" class="league">UEFA Champions League</a>
 						</div>
 						<h2><%= link_to post.title, post %></h2>
@@ -24,7 +24,7 @@
 	<%= will_paginate @posts, :previous_label => 'Anterior', :next_label => 'Siguiente' %>
 	
 	<div class="wrapper wrapper_padding clearfix menu_articles">
-		<div class="row">
+		<div class="row_posts">
 			<div class="col-md-4">
 				<h2 class="center">Fecha de creación</h2>
 				<hr>
