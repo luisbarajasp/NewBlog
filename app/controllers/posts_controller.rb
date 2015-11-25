@@ -11,6 +11,8 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
+		@categories = Category.all.order("created_at DESC")
+
 	end
 
 	def create
@@ -29,6 +31,7 @@ class PostsController < ApplicationController
 	end
 
 	def edit
+		@categories = Category.all.order("created_at DESC")
 	end
 
 	def update
@@ -55,7 +58,7 @@ class PostsController < ApplicationController
 	private
 
 		def post_params
-			params.require(:post).permit( :image, :title, :content, :slug)
+			params.require(:post).permit( :image, :title, :content, :slug, :category_id)
 		end
 		def find_post
 			@post = Post.friendly.find(params[:id])

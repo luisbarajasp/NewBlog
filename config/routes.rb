@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :categories, :only => [:new,:show,:create]
+
   devise_for :users
   #, :skip => :registrations
   #get 'users/:id' => 'users#show', as: 'user'
