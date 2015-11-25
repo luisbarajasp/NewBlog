@@ -1,1 +1,25 @@
-<%= @user.username %>
+<div class="row">
+	<div class="col-md-12">
+		<%= image_tag @user.avatar.url, :class => "avatar-img img-circle" %>
+	</div>
+	<div class="col-md-12">
+		<div class="user">
+			<h2><%= @user.name %></h2>
+			<h3><%= @user.nickname %></h3>
+			<h5><a href="https://twitter.com/<%= @user.username %>" target="_blank">@<%= @user.username %> <i class="fa fa-twitter"></i></a></h5>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="skinny_wrapper">
+	<table class="table table-striped table-bordered">
+  		<tr>
+  			<th class="center">Image</th>
+		    <th class="center">Name</th>
+		    <th class="center">Description</th>
+		    <th class="center">Price</th>
+		    <th class="center">Action</th>
+		</tr>
+</div> -->
+
+

@@ -1,0 +1,57 @@
+$dark: #424652;
+$light: #9a9da4;
+$highlight: #8bc6db;
+$border: #E9E9E9;
+$cream: #e5d8be;
+$blue: #8da29b;
+$white: #fff;
+$gray: #66757F;
+
+.about{
+	margin: auto;
+	#users_wrapper{
+		width: 100%;
+		text-align: center;
+		a{
+			text-decoration: none;
+			color: $highlight;
+			&:hover{
+				color: $blue;
+			}
+		}
+		.col-md-6:nth-child(2n+1){
+			clear: left;
+		}
+	}
+	#us{
+		
+	}
+}
+
+//-------SHOW
+.avatar-img{
+	display: block;
+	margin: 2em auto;
+}
+.user{
+	text-align: center;
+	vertical-align: middle;
+	padding: 1em 0;
+	h3{
+		font-weight: 700;
+	}
+	h5{
+		padding-top: 1em;
+		a{
+			text-decoration: none;
+			color: $highlight;
+			&:hover{
+				color: $blue;
+			}
+		}
+	}
+}
+
+.center{
+	text-align: center;
+}

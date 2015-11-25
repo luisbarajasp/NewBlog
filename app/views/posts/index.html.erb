@@ -40,8 +40,10 @@
 				<h2 class="center">Creador</h2>
 				<hr class="center">
 				<% @users.each do |user| %>
-					<h3><a href="#"><%= user.nickname %></a></h3>
-					<p class="date"><%= user.name %></p>
+					<% if (user.id != 3) %>
+						<h3><a href="#"><%= link_to user.nickname, user %></a></h3>
+						<p class="date"><%= user.name %></p>
+					<% end %>
 				<% end %>
 			</div>
 			<div class="col-md-4">
