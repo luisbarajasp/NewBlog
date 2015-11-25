@@ -12,6 +12,10 @@ $gray: #66757F;
 	#users_wrapper{
 		width: 100%;
 		text-align: center;
+		.thumbnail {
+		    border: 0 none;
+		    box-shadow: none;
+		}
 		a{
 			text-decoration: none;
 			color: $highlight;
