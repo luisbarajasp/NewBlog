@@ -49,15 +49,9 @@
 			<div class="col-md-4">
 				<h2 class="center">Liga</h2>
 				<hr class="center">
-				<h3><a href="#">Liga MX</a></h3>
-				<h3><a href="#">Internacional</a></h3>
-				<h3><a href="#">UEFA Champions League</a></h3>
-				<h3><a href="#">BBVA</a></h3>
-				<h3><a href="#">Premier League</a></h3>
-				<h3><a href="#">MLS</a></h3>
-				<h3><a href="#">Bundesliga</a></h3>
-				<h3><a href="#">Serie A TIM</a></h3>
-				<h3><a href="#">Argentina</a></h3>
+				<% @categories.each do |category| %>
+					<h3><%= link_to category.category, category %></h3>
+				<% end %>
 			</div>
 		</div>
 	</div>
