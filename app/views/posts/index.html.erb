@@ -41,7 +41,7 @@
 				<hr class="center">
 				<% @users.each do |user| %>
 					<% if (user.id != 3) %>
-						<h3><a href="#"><%= link_to user.nickname, user %></a></h3>
+						<h3><%= link_to user.nickname, user %></h3>
 						<p class="date"><%= user.name %></p>
 					<% end %>
 				<% end %>

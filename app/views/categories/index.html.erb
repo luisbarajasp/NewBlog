@@ -1,0 +1,38 @@
+<h1 id="page_title">Ligas</h1>	
+<hr>
+
+<div id="admin_links">
+	<%= link_to "Crear Nueva Liga", new_category_path(@category) %>
+</div>
+
+<div class="skinny_wrapper clearfix">
+  <table class="table table-striped table-bordered">
+    <tr>
+      <th class="center">Liga</th>
+      <th class="center">Acciones</th>
+    </tr>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.category %></td>
+        <td>
+          <div class="dropdown center">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Acción
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><%= link_to "Editar", edit_category_path(category), class: "btn btn-link" %></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to 'Eliminar', category, method: :delete, data: { confirm: 'Estás seguro de eliminar?' }, class: "btn btn-link" %></li>
+            </ul>
+          </div>
+          
+          
+          
+        </td>
+      </tr>
+      <% end %>
+  </table>
+
+  <br>
+</div>

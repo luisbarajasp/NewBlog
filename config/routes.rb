@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :categories, :only => [:new,:show,:create]
+  resources :categories
 
   devise_for :users
   #, :skip => :registrations
