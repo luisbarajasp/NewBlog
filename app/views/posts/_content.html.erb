@@ -1,0 +1,19 @@
+<div id="posts_wrapper" class="skinny_wrapper">
+	<% @posts.each do |post| %>
+		<div class="post">
+			<div class="thumbnail">
+				<%= image_tag post.image.url, :class => "img-centered" %>
+				<div class="caption post-content" id="grad">
+					<p class="date"><%= post.created_at.strftime('%d/%m/%y, %I:%M %P') %></p>
+					<div class="links">
+						<%= link_to post.user.nickname, post.user, :class => "creator" %>
+						<%= link_to post.category.category, post.category, :class => "league" %>
+					</div>
+					<h2><%= link_to post.title, post %></h2>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<%= will_paginate @posts, :previous_label => 'Anterior', :next_label => 'Siguiente' %>

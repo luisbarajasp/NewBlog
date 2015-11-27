@@ -47,7 +47,10 @@ GEM
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
     builder (3.2.2)
+    by_star (2.2.1)
+      activesupport
     byebug (8.2.0)
+    chronic (0.10.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -188,7 +191,9 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.3.5)
+  by_star (~> 2.2, >= 2.2.1)
   byebug
+  chronic (~> 0.10.2)
   coffee-rails (~> 4.1.0)
   devise (~> 3.5, >= 3.5.2)
   fancybox-rails

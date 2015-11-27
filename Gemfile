@@ -19,6 +19,8 @@ gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 gem "paperclip-dropbox", ">= 1.1.7"
 gem "figaro"
 gem 'devise', '~> 3.5', '>= 3.5.2'
+gem 'by_star', '~> 2.2', '>= 2.2.1'
+gem 'chronic', '~> 0.10.2'
 
 group :development, :test do
   gem 'byebug'

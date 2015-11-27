@@ -1,0 +1,32 @@
+<div class="wrapper wrapper_padding clearfix menu_articles">
+	<div class="row_posts">
+		<div class="col-md-4">
+			<h2 class="center">Fecha de creación</h2>
+			<hr>
+			<h3><a href="#">Hoy</a></h3>
+			<h3><a href="#">Ayer</a></h3>
+			<h3><a href="#">Domingo, 1</a></h3>
+			<h3><a href="#">Sábado, 31</a></h3>
+			<h3><a href="#">Viernes, 30</a></h3>
+			<h3><a href="#">Jueves, 29</a></h3>
+			<h3><a href="#">Miércoles, 28</a></h3>
+		</div>
+		<div class="col-md-4">
+			<h2 class="center">Creador</h2>
+			<hr class="center">
+			<% @users.each do |user| %>
+				<% if (user.id != 3) %>
+					<h3><%= link_to user.nickname, user %></h3>
+					<p class="date"><%= user.name %></p>
+				<% end %>
+			<% end %>
+		</div>
+		<div class="col-md-4">
+			<h2 class="center">Liga</h2>
+			<hr class="center">
+			<% @categories.each do |category| %>
+				<h3><%= link_to category.category, category %></h3>
+			<% end %>
+		</div>
+	</div>
+</div>
