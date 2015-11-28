@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pages/timeline'
+
   resources :categories
 
   devise_for :users
@@ -12,6 +14,8 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
   root 'welcome#index'
+
+  get 'pages/timeline'
 
   get '*path' => redirect('/')
 end
