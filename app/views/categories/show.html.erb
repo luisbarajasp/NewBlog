@@ -25,18 +25,7 @@
 	
 	<div class="wrapper wrapper_padding clearfix menu_articles">
 		<div class="row_posts">
-			<div class="col-md-4">
-				<h2 class="center">Fecha de creación</h2>
-				<hr>
-				<h3><a href="#">Hoy</a></h3>
-				<h3><a href="#">Ayer</a></h3>
-				<h3><a href="#">Domingo, 1</a></h3>
-				<h3><a href="#">Sábado, 31</a></h3>
-				<h3><a href="#">Viernes, 30</a></h3>
-				<h3><a href="#">Jueves, 29</a></h3>
-				<h3><a href="#">Miércoles, 28</a></h3>
-			</div>
-			<div class="col-md-4">
+			<div class="col-md-6">
 				<h2 class="center">Creador</h2>
 				<hr class="center">
 				<% @users.each do |user| %>
@@ -46,7 +35,7 @@
 					<% end %>
 				<% end %>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-6">
 				<h2 class="center">Liga</h2>
 				<hr class="center">
 				<% @categories.each do |category| %>
