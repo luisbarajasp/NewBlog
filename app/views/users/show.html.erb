@@ -15,23 +15,21 @@
 	<hr>
 
 <div class="super_skinny_wrapper clearfix posts">
-	
+
 		<% @posts.each do |post| %>
-		<div class="post">
-			<div class="col-md-4">
-				<%= image_tag post.image.url(:thumb), :class => "avatar-img" %>
+			<div class="post">
+				<div class="col-md-4">
+					<%= image_tag post.image.url(:thumb), :class => "avatar-img" %>
+				</div>
+				<div class="col-md-4 content">
+					<%= link_to post.title, post %>
+				</div>
+				<div class="col-md-4 content">
+					<p><%= post.created_at.strftime('%d/%m/%y, %I:%M %P') %></p>
+				</div>
 			</div>
-			<div class="col-md-4 content">
-				<%= link_to post.title, post %>
-			</div>
-			<div class="col-md-4 content">
-				<p><%= post.created_at.strftime('%d/%m/%y, %I:%M %P') %></p>
-			</div>
-		</div>
 		<% end %>
-	
-</div> 
+
+</div>
 
 <%= will_paginate @posts, :previous_label => 'Anterior', :next_label => 'Siguiente' %>
-
-
